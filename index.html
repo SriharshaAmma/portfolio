@@ -4,18 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amma Sri Harsha | Full Stack Developer & Data Scientist</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div class="loading-overlay" id="loading">
-    <div class="loading-spinner"></div>
-  </div>
-
-  <!-- Animated Background -->
-  <canvas id="bg-canvas"></canvas>
-
   <!-- Navigation -->
   <nav id="navbar">
     <a href="#hero" class="nav-link">Home</a>
@@ -32,8 +23,7 @@
     <h1>Amma Sri Harsha</h1>
     <p class="subtitle">Full Stack Developer & Data Scientist</p>
     <p class="description">
-      Crafting innovative digital solutions with cutting-edge technologies. 
-      Passionate about building scalable applications and deriving insights from data to solve real-world problems.
+      Crafting innovative digital solutions with cutting-edge technologies.
     </p>
     <div class="cta-buttons">
       <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -47,43 +37,15 @@
     <div class="about-grid">
       <div class="about-info">
         <h3>Contact Information</h3>
-        <div class="contact-item">
-          <strong>Email:</strong>
-          <a href="mailto:sriharshaamma5@gmail.com">sriharshaamma5@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <strong>Location:</strong>
-          <span>Hyderabad, India</span>
-        </div>
-        <div class="contact-item">
-          <strong>GitHub:</strong>
-          <a href="https://github.com/SriharshaAmma" target="_blank">SriharshaAmma</a>
-        </div>
-        <div class="contact-item">
-          <strong>LinkedIn:</strong>
-          <a href="https://linkedin.com/in/amma-sriharsha-3924862b6" target="_blank">amma-sriharsha-3924862b6</a>
-        </div>
-        <div class="contact-item">
-          <strong>Languages:</strong>
-          <span>English, Telugu, Hindi</span>
-        </div>
+        <div class="contact-item"><strong>Email:</strong> <a href="mailto:sriharshaamma5@gmail.com">sriharshaamma5@gmail.com</a></div>
+        <div class="contact-item"><strong>Location:</strong> Hyderabad, India</div>
+        <div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/SriharshaAmma" target="_blank">SriharshaAmma</a></div>
+        <div class="contact-item"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/amma-sriharsha-3924862b6" target="_blank">amma-sriharsha-3924862b6</a></div>
+        <div class="contact-item"><strong>Languages:</strong> English, Telugu, Hindi</div>
       </div>
       <div class="about-text">
-        <p>
-          I'm a passionate Full Stack Developer and Data Scientist currently pursuing B.Tech in Information Technology. 
-          With a strong foundation in both web development and machine learning, I love creating end-to-end solutions 
-          that combine beautiful user interfaces with powerful data-driven insights.
-        </p>
-        <p>
-          My journey spans from building responsive web applications using modern frameworks like React and Node.js, 
-          to developing sophisticated machine learning models for predictive analytics. I thrive on challenges that 
-          require both technical expertise and creative problem-solving.
-        </p>
-        <p>
-          Beyond coding, I'm actively involved in hackathons and competitions, where I've developed innovative solutions 
-          like AI-powered landmark apps and waste management systems. My diverse interests include singing and dancing, 
-          which help me maintain a creative balance in my technical pursuits.
-        </p>
+        <p>I'm a passionate Full Stack Developer and Data Scientist currently pursuing B.Tech in IT.</p>
+        <p>My journey spans web applications using React/Node.js to ML models for predictive analytics.</p>
       </div>
     </div>
   </section>
@@ -92,7 +54,18 @@
   <section id="skills" class="animate-on-scroll">
     <h2 class="section-title">Technical Skills</h2>
     <div class="skills-container">
-      <!-- Skill categories here -->
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <div class="skill-tags"><span class="skill-tag">Java</span><span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span></div>
+      </div>
+      <div class="skill-category">
+        <h3>Frontend Development</h3>
+        <div class="skill-tags"><span class="skill-tag">React</span><span class="skill-tag">Flutter</span><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">TailwindCSS</span></div>
+      </div>
+      <div class="skill-category">
+        <h3>Backend & Databases</h3>
+        <div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">SQL</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Supabase</span><span class="skill-tag">Firebase</span></div>
+      </div>
     </div>
   </section>
 
@@ -100,7 +73,18 @@
   <section id="education" class="animate-on-scroll">
     <h2 class="section-title">Education</h2>
     <div class="timeline">
-      <!-- Education timeline items here -->
+      <div class="timeline-item">
+        <h4>B.Tech in IT</h4>
+        <div class="institution">BVRIT Hyderabad College of Engineering for Women</div>
+        <div class="duration">2024 – 2027</div>
+        <div class="cgpa">CGPA: 7.99</div>
+      </div>
+      <div class="timeline-item">
+        <h4>Diploma in CSE</h4>
+        <div class="institution">Smt. Durgabai Deshmukh Govt Women's Technical Training Institute</div>
+        <div class="duration">2021 – 2024</div>
+        <div class="cgpa">CGPA: 9.03</div>
+      </div>
     </div>
   </section>
 
@@ -108,15 +92,14 @@
   <section id="projects" class="animate-on-scroll">
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
-      <!-- Project cards here -->
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="animate-on-scroll">
-    <h2 class="section-title">Experience</h2>
-    <div class="timeline">
-      <!-- Experience timeline items here -->
+      <div class="project-card">
+        <h3><a href="https://github.com/SriharshaAmma/Task_Manager_App" target="_blank">Task Manager App</a></h3>
+        <p>Full-stack task management app using React, TypeScript & Supabase.</p>
+      </div>
+      <div class="project-card">
+        <h3><a href="https://github.com/SriharshaAmma/Store-sales-analysis-and-forecasting" target="_blank">Store Sale Analysis & Forecasting</a></h3>
+        <p>EDA & ARIMA predictive models to forecast sales trends.</p>
+      </div>
     </div>
   </section>
 
@@ -125,16 +108,10 @@
     <h2 class="section-title">Let's Connect</h2>
     <div class="contact-form">
       <form onsubmit="submitForm(event)">
-        <div class="form-group">
-          <input type="text" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-          <textarea placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+        <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+        <div class="form-group"><input type="email" placeholder="Your Email" required></div>
+        <div class="form-group"><textarea placeholder="Your Message" required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
       </form>
       <div id="status" class="form-status"></div>
     </div>
