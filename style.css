@@ -1,3 +1,4 @@
+/* Reset & Global */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,36 +7,39 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* Background image and fallback color */
-  background: url('https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+  background: url('https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydGZvbGlvJTIwYmFja2tncm91bmR8ZW58MHx8MHx8') no-repeat center center fixed;
   background-size: cover;
-  color: #e0e0e0; /* lighter text on dark background */
+  color: #e0e0e0;
   line-height: 1.6;
-  position: relative;
   min-height: 100vh;
-  margin: 0;
   padding: 0;
+  position: relative;
 }
 
-/* Dark translucent overlay on the background image */
+/* Dark overlay for better readability */
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(10, 25, 47, 0.75);
+  background: rgba(10, 25, 47, 0.85);
   z-index: -1;
 }
 
-header,
-section,
-footer {
-  background-color: rgba(10, 25, 47, 0.85); /* dark translucent background */
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+/* Container sections */
+header, section, footer {
+  background-color: rgba(15, 30, 60, 0.85);
+  padding: 40px 25px;
+  max-width: 1000px;
+  margin: 25px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
   color: #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover, section:hover, footer:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.45);
 }
 
 header {
@@ -43,48 +47,85 @@ header {
 }
 
 header h1 {
-  margin-bottom: 10px;
+  font-size: 3rem;
+  color: #64ffda;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #a0cfd8;
 }
 
 nav {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 nav a {
   color: #64ffda;
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
   color: #52e0c4;
+  text-decoration: underline;
+  transform: scale(1.05);
 }
 
+/* Headings */
 h2 {
-  margin-bottom: 20px;
   color: #64ffda;
+  margin-bottom: 20px;
   border-bottom: 2px solid #64ffda;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
+  font-size: 2rem;
 }
 
+h3 {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* Project cards */
 .project {
   background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
+  color: #1a1a1a;
+  padding: 25px;
   margin-bottom: 20px;
-  border-left: 5px solid #64ffda;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: #333;
+  border-left: 6px solid #64ffda;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.project a {
+  color: #0f3057;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project a:hover {
+  color: #007a87;
+  text-decoration: underline;
+}
+
+/* Lists */
 ul {
   list-style-type: disc;
-  margin-left: 20px;
+  margin-left: 25px;
   margin-bottom: 20px;
 }
 
+/* Form Styling */
 form {
   display: flex;
   flex-direction: column;
@@ -94,35 +135,72 @@ form {
 
 form input,
 form textarea {
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: vertical;
+  border: 1px solid #64ffda;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: #e0e0e0;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #52e0c4;
+  background: rgba(255,255,255,0.15);
 }
 
 form button {
   background: #64ffda;
-  color: #000;
+  color: #0b0b0b;
   border: none;
-  padding: 12px;
+  padding: 15px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
   background: #52e0c4;
+  transform: scale(1.05);
 }
 
 #status {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #7bc67e; /* a softer green */
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #7bc67e;
 }
 
+/* Footer */
 footer {
   text-align: center;
+  font-size: 0.95rem;
+  color: #a0cfd8;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  header, section, footer {
+    padding: 25px 15px;
+  }
+
+  nav a {
+    margin: 0 8px;
+  }
+}
