@@ -3,231 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amma Sri Harsha | Portfolio</title>
+  <title>Amma Sri Harsha | Full Stack Developer & Data Scientist</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <!-- Loading Screen -->
+  <div class="loading-overlay" id="loading">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Animated Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
     <h1>Amma Sri Harsha</h1>
-    <p>Full Stack Developer & Data Scientist</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#internship">Internship</a>
-      <a href="#competitions">Competitions</a>
-      <a href="#experience">Experience</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#hobbies">Hobbies</a>
-      <a href="#languages">Languages</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <ul>
-      <li><strong>Email:</strong> sriharshaamma5@gmail.com</li>
-      <li><strong>Location:</strong> Hyderabad</li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/SriharshaAmma" target="_blank">SriharshaAmma</a></li>
-      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/amma-sriharsha-3924862b6" target="_blank">amma-sriharsha-3924862b6</a></li>
-    </ul>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Java</li>
-      <li>Python</li>
-      <li>JavaScript / TypeScript</li>
-      <li>React / Node.js / Express.js</li>
-      <li>HTML / CSS / TailwindCSS</li>
-      <li>SQL / PostgreSQL / Supabase</li>
-    </ul>
-    <h3>Academic Subjects</h3>
-    <ul>
-      <li>Database Management Systems</li>
-      <li>Operating Systems</li>
-      <li>Software Engineering</li>
-    </ul>
-  </section>
-
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>B.Tech in Information Technology</strong><br />
-        BVRIT Hyderabad College of Engineering for Women (2024 – 2027)<br />
-        CGPA: 7.3
-      </li>
-      <li>
-        <strong>Diploma in Computer Science and Engineering</strong><br />
-        Smt. Durgabai Deshmukh Government Women’s Technical Training Institute (2021 – 2024)<br />
-        CGPA: 9.03
-      </li>
-    </ul>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>
-        <a href="https://github.com/SriharshaAmma/Task_Manager_App" target="_blank" rel="noopener noreferrer">
-          Task Manager App
-        </a>
-      </h3>
-      <p>
-        Full-stack task management web app with authentication, real-time task synchronization, and analytics dashboard using React, TypeScript, and Supabase.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>
-        <a href="https://github.com/SriharshaAmma/Store-sales-analysis-and-forecasting" target="_blank" rel="noopener noreferrer">
-          Store Sale Analysis & Forecasting
-        </a>
-      </h3>
-      <p>
-        Performed EDA and built predictive models with ARIMA to forecast future sales trends.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>
-        <a href="https://github.com/SriharshaAmma/spam-detection-" target="_blank" rel="noopener noreferrer">
-          Spam Detection
-        </a>
-      </h3>
-      <p>
-        Built a machine learning model to classify spam emails using SVM and KNN. Evaluated performance using confusion matrix.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>
-        <a href="https://github.com/SriharshaAmma/Sentiment-Analysis-" target="_blank" rel="noopener noreferrer">
-          Sentiment Analysis
-        </a>
-      </h3>
-      <p>
-        Developed a tool to classify sentiments from text using NLP and machine learning techniques.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>
-        <a href="https://github.com/SriharshaAmma/internship_analytics" target="_blank" rel="noopener noreferrer">
-          Internship Analytics Dashboard
-        </a>
-      </h3>
-      <p>
-        Interactive dashboard built with Python and Dash to visualize and filter internship performance data.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>Nivi Chat (Java-based Chat App)</h3>
-      <p>
-        Real-time chat application for gaming environments using Java sockets.
-      </p>
+    <p class="subtitle">Full Stack Developer & Data Scientist</p>
+    <p class="description">
+      Crafting innovative digital solutions with cutting-edge technologies. 
+      Passionate about building scalable applications and deriving insights from data to solve real-world problems.
+    </p>
+    <div class="cta-buttons">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="#contact" class="btn btn-secondary">Get In Touch</a>
     </div>
   </section>
 
-  <!-- Internship -->
-  <section id="internship">
-  <h2>Internship</h2>
-
-  <h3>Data Science with Python</h3>
-  <p><em>Eduviz (Virtual), Nov 2024 – Dec 2024</em></p>
-  <ul>
-    <li>Worked on a Spam Detection project using machine learning algorithms.</li>
-    <li>Implemented both SVM and KNN models; KNN achieved higher accuracy.</li>
-    <li>Evaluated model performance using a confusion matrix.</li>
-  </ul>
-
-  <h3>Software Development Intern</h3>
-  <p><em>VNR VJIET College (Offline), Jan 2025 – Feb 2025</em></p>
-  <ul>
-    <li>Developed Android applications using Flutter for real-world projects.</li>
-    <li>Created web applications with integrated AI/ML models.</li>
-    <li>Trained object detection models using Faster R-CNN for automated tasks.</li>
-    <li>Gained hands-on experience in software development and model deployment.</li>
-  </ul>
-</section>
-
-
-  <!-- Competitions -->
-  <section id="competitions">
-    <h2>Competitions</h2>
-    <ul>
-      <li>Gen AI Hackathon – Developed <strong>Gemini Landmark Destination App</strong> using Google Gemini & Flutter.</li>
-      <li>DevAstra’25 – Built a <strong>Waste Management System</strong> web app using AI & IoT concepts.</li>
-      <li>Telangana State Singing Competition (TRSMA) – Third prize winner</li>
-    </ul>
+  <!-- About Section -->
+  <section id="about" class="animate-on-scroll">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-info">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <strong>Email:</strong>
+          <a href="mailto:sriharshaamma5@gmail.com">sriharshaamma5@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>Location:</strong>
+          <span>Hyderabad, India</span>
+        </div>
+        <div class="contact-item">
+          <strong>GitHub:</strong>
+          <a href="https://github.com/SriharshaAmma" target="_blank">SriharshaAmma</a>
+        </div>
+        <div class="contact-item">
+          <strong>LinkedIn:</strong>
+          <a href="https://linkedin.com/in/amma-sriharsha-3924862b6" target="_blank">amma-sriharsha-3924862b6</a>
+        </div>
+        <div class="contact-item">
+          <strong>Languages:</strong>
+          <span>English, Telugu, Hindi</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>
+          I'm a passionate Full Stack Developer and Data Scientist currently pursuing B.Tech in Information Technology. 
+          With a strong foundation in both web development and machine learning, I love creating end-to-end solutions 
+          that combine beautiful user interfaces with powerful data-driven insights.
+        </p>
+        <p>
+          My journey spans from building responsive web applications using modern frameworks like React and Node.js, 
+          to developing sophisticated machine learning models for predictive analytics. I thrive on challenges that 
+          require both technical expertise and creative problem-solving.
+        </p>
+        <p>
+          Beyond coding, I'm actively involved in hackathons and competitions, where I've developed innovative solutions 
+          like AI-powered landmark apps and waste management systems. My diverse interests include singing and dancing, 
+          which help me maintain a creative balance in my technical pursuits.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>TNS India Foundation – Volunteer (Classroom Representative)</strong><br />
-        Organized classroom activities and community engagements. Received certification for service.
-      </li>
-      <li>
-        <strong>Industech Solutions – Trainee</strong><br />
-        Completed industrial training in programming and software development.
-      </li>
-    </ul>
+  <!-- Skills Section -->
+  <section id="skills" class="animate-on-scroll">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-container">
+      <!-- Skill categories here -->
+    </div>
   </section>
 
-  <!-- Certifications -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Data Science with Python – Eduviz</li>
-    </ul>
+  <!-- Education Section -->
+  <section id="education" class="animate-on-scroll">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <!-- Education timeline items here -->
+    </div>
   </section>
 
-  <!-- Hobbies -->
-  <section id="hobbies">
-    <h2>Hobbies</h2>
-    <ul>
-      <li>Singing</li>
-      <li>Dancing</li>
-    </ul>
+  <!-- Projects Section -->
+  <section id="projects" class="animate-on-scroll">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <!-- Project cards here -->
+    </div>
   </section>
 
-  <!-- Languages -->
-  <section id="languages">
-    <h2>Languages</h2>
-    <ul>
-      <li>English</li>
-      <li>Telugu</li>
-      <li>Hindi</li>
-    </ul>
+  <!-- Experience Section -->
+  <section id="experience" class="animate-on-scroll">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      <!-- Experience timeline items here -->
+    </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form onsubmit="submitForm(event)">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="status"></p>
+  <!-- Contact Section -->
+  <section id="contact" class="animate-on-scroll">
+    <h2 class="section-title">Let's Connect</h2>
+    <div class="contact-form">
+      <form onsubmit="submitForm(event)">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+      <div id="status" class="form-status"></div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Amma Sri Harsha. All rights reserved.</p>
+    <p>&copy; 2025 Amma Sri Harsha. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>
